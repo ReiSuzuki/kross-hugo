@@ -14,7 +14,7 @@ VERSION: Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: roboto, sans-serif;
+  font-family: var(--systemFontFamily);
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -35,7 +35,8 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: open sans, sans-serif;
+  font-family: var(--systemFontFamily);
+
   line-height: 1.2
 }
 
@@ -87,7 +88,8 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: open sans, sans-serif;
+  font-family: var(--systemFontFamily);
+
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -459,8 +461,10 @@ textarea.form-control {
 }
 
 .hero-area {
-  padding: 250px 0 200px;
-  position: relative
+  padding: 400px 0 250px;
+  position: relative;
+  background: var(--primary-color) url('/images/backgrounds/heroimage.jpg') no-repeat;
+  background-size: cover;
 }
 
 @media(max-width:767px) {
@@ -746,7 +750,8 @@ blockquote {
 }
 
 .content strong {
-  font-family: open sans, sans-serif;
+  font-family: var(--systemFontFamily);
+
   font-size: 22px;
   font-weight: 400;
   color: #000;
