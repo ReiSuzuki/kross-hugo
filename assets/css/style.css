@@ -14,7 +14,7 @@ VERSION: Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: var(--systemFontFamily);
+  font-family: roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -35,8 +35,7 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: var(--systemFontFamily);
-
+  font-family: open sans, sans-serif;
   line-height: 1.2
 }
 
@@ -88,8 +87,7 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: var(--systemFontFamily);
-
+  font-family: open sans, sans-serif;
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -461,10 +459,8 @@ textarea.form-control {
 }
 
 .hero-area {
-  padding: 400px 0 250px;
-  position: relative;
-  background: var(--primary-color) url('/images/backgrounds/heroimage.jpg') no-repeat;
-  background-size: cover;
+  padding: 250px 0 200px;
+  position: relative
 }
 
 @media(max-width:767px) {
@@ -750,8 +746,7 @@ blockquote {
 }
 
 .content strong {
-  font-family: var(--systemFontFamily);
-
+  font-family: open sans, sans-serif;
   font-size: 22px;
   font-weight: 400;
   color: #000;
@@ -879,4 +874,43 @@ blockquote {
 
 .filter-controls li.active {
   font-weight: 700
+}
+.issueimage{
+  max-height: 650px;
+  min-height: 450px;
+  overflow: hidden;
+}
+.issuebox{
+  background: #eee;
+  position: absolute;
+  z-index: 1;
+  left: auto;
+  right: 12px;
+  bottom: -5rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  margin-left: 10rem;
+  margin-right: 0;
+}
+.issuebox.odd{
+  left: 12px;
+  right: auto;
+  margin-left:0;
+  margin-right: 10rem;
+}
+
+.issueboxslope{
+  content:"";
+  height: 80px;
+  transform: skewY(-4deg);
+  position: absolute;
+  top: -2.5rem;
+  left:0;
+  right:0;
+  z-index: -1;
+  width: 100%;
+}
+
+.issuebox.odd .issueboxslope{
+  transform: skewY(4deg);
 }
