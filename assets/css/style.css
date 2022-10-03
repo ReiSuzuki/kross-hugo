@@ -460,7 +460,8 @@ textarea.form-control {
 
 .hero-area {
   padding: 250px 0 200px;
-  position: relative
+  position: relative;
+  background-size: cover !important;
 }
 
 @media(max-width:767px) {
@@ -879,6 +880,9 @@ blockquote {
   max-height: 650px;
   min-height: 450px;
   overflow: hidden;
+}
+.issueimage img{
+  margin: 0 auto;
 }
 .issuebox{
   background: #eee;

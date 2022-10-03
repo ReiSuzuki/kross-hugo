@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   <!-- hero area -->
-  <section class="hero-area bg-primary overflow-hidden" id="parallax">
+  <section class="hero-area bg-primary overflow-hidden" id="parallax" style="background-image: url('{{ .Site.Data.homepage.banner.image | safeURL }}') !important">
     <div class="container">
       <div class="row">
         <div class="col-lg-11 mx-auto">
@@ -42,20 +42,21 @@
   <!-- /about -->
   {{ end }}
 
-  {{ if .Site.Data.homepage.issues.enable }}
-  {{ with .Site.Data.homepage.issues }}
-  <section class="section pt-0">
+  {{ if .Site.Data.homepage.reforms.enable }}
+  {{ with .Site.Data.homepage.reforms }}
+  <section class="section pt-0" >
     <div class="container">
       {{ range $i,$p := .item }}
       <div class="row align-items-center mb-5">
         <div class="card mb-4 position-relative">
-          <div class="issueimage">
+          <div class="issueimage" data-aos="{{ if (modBool $i 2)}}fade-left{{else}}fade-right{{end}}">
             <img class="card-img-top rounded-4" src="{{.backgroundimage | relURL }}" alt="{{.title}}">
           </div>
-          <div class="card-body issuebox {{ if (modBool $i 2)}}odd{{end}}" style="background-color: {{ .backgroundcolor }};">
+          <div class="card-body issuebox {{ if (modBool $i 2)}}odd{{end}}" style="background-color: {{ .backgroundcolor }};" data-aos="{{ if (modBool $i 2)}}fade-right{{else}}fade-left{{end}}">
             <div class="issueboxslope rounded-2" style="background-color: {{ .backgroundcolor }};"> </div>
             <h3 class="card-title text-white">{{ .title }}</h3>
             <p class="card-text text-white">{{ .description }}</p>
+            <a class="btn btn-primary" href="reforms/{{ .url | safeURL }}">{{ .cta }}</a>
           </div>
         </div>
       </div>
