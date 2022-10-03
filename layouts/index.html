@@ -56,7 +56,7 @@
             <div class="issueboxslope rounded-2" style="background-color: {{ .backgroundcolor }};"> </div>
             <h3 class="card-title text-white">{{ .title }}</h3>
             <p class="card-text text-white">{{ .description }}</p>
-            <a class="btn btn-light" href="reforms/{{ .url | safeURL }}">{{ .cta }}</a>
+            <a class="btn btn-light" href="reforms/{{ .url | safeURL }}" style="font-size:12px;">{{ .buttontext }}</a>
           </div>
         </div>
       </div>
