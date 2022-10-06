@@ -3,10 +3,10 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500,700";
+@import "https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:300,400,500,700";
 
 @font-face {
-  font-family: bwnistaint-xbd;
+  font-family: var(--main-font);
   src: url(../fonts/BwNistaInt-xBd.woff) format("woff");
   font-style: normal;
   font-display: swap
@@ -14,7 +14,7 @@ VERSION: Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: roboto, sans-serif;
+  font-family: var(--main-font);
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -25,7 +25,7 @@ p {
   color: #4c4c4c;
   font-size: 15px;
   line-height: 1.8;
-  font-family: roboto, sans-serif
+  font-family: var(--main-font);
 }
 
 h1,
@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: open sans, sans-serif;
+  font-family: var(--main-font);
   line-height: 1.2
 }
 
@@ -87,7 +87,7 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: open sans, sans-serif;
+  font-family: var(--main-font);
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -223,7 +223,7 @@ a:hover {
 
 .section-title {
   margin-bottom: 80px;
-  font-family: bwnistaint-xbd
+  font-family: var(--main-font);
 }
 
 .bg-cover {
@@ -332,11 +332,11 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: open sans, sans-serif !important
+  font-family: var(--main-font);
 }
 
 .font-tertiary {
-  font-family: bwnistaint-xbd !important
+  font-family: var(--main-font);
 }
 
 .shadow {
@@ -445,7 +445,7 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
-  font-family: bwnistaint-xbd;
+  font-family: var(--main-font);
   text-transform: uppercase;
   padding: 15px
 }
@@ -747,7 +747,7 @@ blockquote {
 }
 
 .content strong {
-  font-family: open sans, sans-serif;
+  font-family: var(--main-font);
   font-size: 22px;
   font-weight: 400;
   color: #000;

@@ -55,7 +55,7 @@
           <div class="card-body issuebox {{ if (modBool $i 2)}}odd{{end}}" style="background-color: {{ .backgroundcolor }};" data-aos="{{ if (modBool $i 2)}}fade-right{{else}}fade-left{{end}}">
             <div class="issueboxslope rounded-2" style="background-color: {{ .backgroundcolor }};"> </div>
             <h3 class="card-title text-white">{{ .title }}</h3>
-            <p class="card-text text-white">{{ .description }}</p>
+            <p class="card-text text-white">{{ .description | markdownify}}</p>
             <a class="btn btn-light" href="reforms/{{ .url | safeURL }}" style="font-size:12px;">{{ .buttontext }}</a>
           </div>
         </div>
@@ -249,6 +249,18 @@
 
   {{ if .Site.Data.homepage.clients_logo_slider.enable }}
   <!-- client logo slider -->
+  <section class="section pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          {{ with .Site.Data.homepage.clients_logo_slider }}
+          <h2 >{{.title | markdownify}}</h2>
+          <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section pb-0">
     <div class="container">
       {{ partial "client-slider.html" . }}
